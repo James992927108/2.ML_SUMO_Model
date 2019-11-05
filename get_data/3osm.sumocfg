@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="sumo_input/kaoshiung.net.xml"/>
+        <route-files value="sumo_input/osm_3.rou.xml"/>
+        <!-- <additional-files value="input/osm.add.xml"/> -->
+    </input>
+
+    <output>
+        <!-- <tripinfo-output value="output/out.xml"/> -->
+        <tripinfo-output.write-unfinished value="true"/>
+        <!-- <log value="output/log.txt"/> -->
+    </output>
+
+    <time>
+        <end value="500"/>
+    </time>
+
+    <processing>
+        <ignore-route-errors value="true"/>
+    </processing>
+
+    <routing>
+        <device.rerouting.adaptation-steps value="180"/>
+    </routing>
+
+    <report>
+        <duration-log.statistics value="false"/>
+        <no-step-log value="true"/>
+        <no-warnings value="true"/>
+    </report> 
+</configuration>
